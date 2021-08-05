@@ -1,7 +1,7 @@
 #pragma once   //maybe should be static class
 #include "display.h"
 #include "renderer.h"
-#include "RubicsCube.h"
+#include "RubiksCube.h"
 
 
 
@@ -9,7 +9,7 @@ void mouse_callback(GLFWwindow* window, int button, int action, int mods)
 {
 
 	Renderer* rndr = (Renderer*)glfwGetWindowUserPointer(window);
-	RubicsCube* scn = (RubicsCube*)rndr->GetScene();
+	RubiksCube* scn = (RubiksCube*)rndr->GetScene();
 	if (action == GLFW_PRESS && button == GLFW_MOUSE_BUTTON_RIGHT)
 	{
 		double x2, y2;
@@ -24,14 +24,14 @@ void mouse_callback(GLFWwindow* window, int button, int action, int mods)
 	void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 	{
 		Renderer* rndr = (Renderer*)glfwGetWindowUserPointer(window);
-		RubicsCube* scn = (RubicsCube*)rndr->GetScene();
+		RubiksCube* scn = (RubiksCube*)rndr->GetScene();
 		rndr->MoveCamera(0, scn->zTranslate, (-yoffset) * 1.2f);
 	}
 	
 	void cursor_position_callback(GLFWwindow* window, double xpos, double ypos)
 	{
 		Renderer* rndr = (Renderer*)glfwGetWindowUserPointer(window);
-		RubicsCube* scn = (RubicsCube*)rndr->GetScene();
+		RubiksCube* scn = (RubiksCube*)rndr->GetScene();
 
 		rndr->UpdatePosition((float)xpos,(float)ypos);
 
@@ -54,7 +54,7 @@ void mouse_callback(GLFWwindow* window, int button, int action, int mods)
 	void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 	{
 		Renderer* rndr = (Renderer*)glfwGetWindowUserPointer(window);
-		RubicsCube* scn = (RubicsCube*)rndr->GetScene();
+		RubiksCube* scn = (RubiksCube*)rndr->GetScene();
 
 		if (action == GLFW_PRESS || action == GLFW_REPEAT)
 		{
