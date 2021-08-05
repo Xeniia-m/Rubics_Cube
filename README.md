@@ -1,4 +1,4 @@
-# RubicsCube
+# RubiksCube
 Rubik's Cube solver implemented by C++ and OpenGL, Computer Graphics assignment
 
  'R' press state for right wall rotation animation (90 degrees clockwise).
